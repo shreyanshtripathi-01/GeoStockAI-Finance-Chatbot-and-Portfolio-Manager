@@ -1,0 +1,74 @@
+:root {
+  --color-primary: #111827;
+  --color-primary-dark: #000000;
+  --color-success: #10b981;
+  --color-danger: #ef4444;
+  --color-warning: #f59e0b;
+}
+
+.dark {
+  --bg-primary: #111827;
+  --bg-secondary: #1f2937;
+  --text-primary: #f3f4f6;
+  --text-secondary: #9ca3af;
+  --border-color: #374151;
+}
+
+.light {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f3f4f6;
+  --text-primary: #111827;
+  --text-secondary: #4b5563;
+  --border-color: #e5e7eb;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--text-secondary);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-primary);
+}
+
+/* Transitions */
+.transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+/* Custom Classes */
+.bg-primary {
+  background-color: var(--color-primary) !important;
+}
+
+.text-primary {
+  color: var(--color-primary) !important;
+}
+
+.border-primary {
+  border-color: var(--color-primary) !important;
+}
+
+/* Card Styles */
+.card {
+  @apply rounded-lg border transition-all duration-200;
+  background-color: var(--bg-primary);
+  border-color: var(--border-color);
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+} 
